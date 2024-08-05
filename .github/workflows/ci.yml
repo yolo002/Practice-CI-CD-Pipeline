@@ -21,3 +21,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: Security Check with Bandit
+      run: |
+        bandit -r app
+    - name: Dependency Check with Safety
+      run: |
+        safety check
